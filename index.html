@@ -117,6 +117,7 @@
         </section>
     </main>
 
+
     <footer class="main-footer">
         <div class="footer-social">
             <a class = "social-button" href="#">Твиттер</a>
@@ -132,5 +133,24 @@
             <a class = "different-button" href="#">Экологические стандарты</a>
         </div>
     </footer>
+
+    <section class = "modal modal-login">
+        <h2 class = "visually-hidden">Личный кабинет</h2>
+        <form action="" class="login-form" method="POST">
+            <p>
+                <label class = "visually-hidden" for="user-email">Почта</label>
+                <input class="login-icon-user" id="user-email" type="email" name="email" placeholder="Электронная почта">
+            </p>
+            <p>
+                <label for="user-password">Пароль</label>
+                <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+            </p>
+            <button class="button" type="submit">Войти</button>
+            <p class="login-users-info">
+                <a href="#" class="restore">Забыли пароль</a>
+                <a href="#" class="registration">Новая регистрация</a>
+            </p>
+        </form>
+    </section>
 </body>
 </html>
