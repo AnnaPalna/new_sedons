@@ -1,3 +1,14 @@
+/* Общие стили */
+/* *
+{
+    border: 1px solid red;
+}  */
+
+html, body {
+    min-width: 1200px;
+    min-height: 1750px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -10,22 +21,61 @@ body {
     background-color: #8aa496;
 }
 
+/*Шапка*/
+
+.container {
+    width: 1150px;
+    margin: 0 auto;
+}
+
 a {
     text-decoration: none;
 }
 
 .main-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    min-height: 70px;
+
     font-size: 16px;
     line-height: 20px;
     font-weight: bold;
     color: #ffffff;
 }
 
+.main-header-logo {
+    width: 154px;
+    height: 64px;
+    margin-top: 10px;
+}
 
 .site-navigation,
 .user-navigation {
+
     list-style: none;
 }
+
+.site-navigation {
+    display: flex;
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+
+    min-height: 70px;
+    justify-content: left;
+}
+
+.user-navigation {
+    display: flex;
+
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+
+    min-height: 70px;
+}
+
 
 .site-navigation a,
 .user-navigation a {
@@ -38,25 +88,79 @@ a {
     background: #ffffff;
 }
 
+.site-navigation li {
+    padding: 0 25px;
+}
+
+.user-navigation li {
+    padding: 0 10px;
+}
+
 .slider h2 {
+    position: relative;
     font-size: 60px;
     font-weight: bold;
     color:#ffffff;
 
     text-align: center;
+    margin-top: -300px;
+    z-index: 10;
+}
+
+.button-wrapper {
+    
 }
 
 .slider-button {
+    position: relative;
+    margin:auto; 
+    display:block;
+    z-index: 15;
+    bottom: 20px;
+
+
+
     background: #eb563b;
     color:#ffffff;
     font-size: 32px;
     font-weight: bold;
     line-height: 60px;
     border-radius: 50px;
+    border:none;
+
+}
+
+/* Главный раздел */
+
+.slider {
+    
+}
+
+.first-img {
+  left: 240px;
+  /* margin-left: 240px;  */
+  position: relative;
+  z-index: 3;
+}
+
+.second-img {
+    position: absolute;
+    top: 150px;
+    left: 620px;
+    z-index: 0;
+    
+}
+
+.promotion-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .free-raspberry {
-    background-image: url('img/rasp.png');
+    background-image: url('img/berrys.jpg');
+    width: 560px;
+    border-radius: 15px;
     background-position: 0 0;
     background-repeat: no-repeat; 
 }
@@ -65,12 +169,21 @@ a {
     font-size: 35px;
     color:#ffffff;
     font-weight: bold;
+
+    padding: 20px;
+    padding-bottom: 30px;
+    margin: 0;
 }
 
 .free-raspberry p {
     font-size: 18px;
     color:#ffffff;
     font-weight: bold;
+
+    margin: 0;
+    padding: 18px;
+    padding-bottom: 50px;
+    /* padding-right: 30px; */
 }
 
 .free-raspberry-button {
@@ -81,10 +194,24 @@ a {
     border-radius: 20px;
     line-height: 30px;
 
+    position: relative;
+    margin-bottom: 20px;
+    left: 370px;
+
+    width: 165px;
+    height: 47px;
+    border:none;
+
 }
 
 .free-chocolate {
-    background-image: url('img/chocolate2.png');
+     
+    position: relative;
+    z-index: 20;
+
+    background-image: url('img/shoco.jpg');
+    width: 48%;
+    border-radius: 15px;
     /* background-position: 0 0; */
     background-repeat: no-repeat; 
 }
@@ -93,12 +220,20 @@ a {
     font-size: 35px;
     color:#ffffff;
     font-weight: bold;
+
+    padding: 20px;
+    padding-bottom: 30px;
+    margin: 0;
 }
 
 .free-chocolate p {
     font-size: 18px;
     color:#ffffff;
     font-weight: bold;
+
+    margin: 0;
+    padding: 18px;
+    padding-bottom: 50px;
 }
 
 .free-chocolate-button {
@@ -108,10 +243,30 @@ a {
     font-size: 18px;
     border-radius: 20px;
     line-height: 30px;
+
+    width: 165px;
+    height: 47px;
+    border:none;
+
+    position: relative;
+    margin-bottom: 20px;
+    left: 370px;
 }
 
+
 .range-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     list-style: none;
+
+    margin:0;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.range-list li {
+    padding:10px;
 }
 
 .range-list li b {
@@ -129,42 +284,91 @@ a {
 }
 
 .features {
+    box-sizing: border-box;
     background-image: url('img/patern.jpg');
     repeat: no-repeat;
+
+
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    border-radius: 15px;
 }
 .features h2 {
     font-size: 24px;
-}
 
-.features-list {
-    list-style: none;
+    padding-top: 30px;
+    padding-left: 20px;
     
 }
 
+.features-list {
+    box-sizing:border-box;
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.feature-list-item {
+
+    line-height: 25px;
+    margin: 0;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.blog {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
 .news {
     background-image: url('img/strawberry_background.jpg');
-    repeat:no-repeat;
-    width: 40%;
+    repeat: no-repeat;
+    width: 48%;
     height: 15vw;
+
+    margin-right: 45px;
+    border-radius: 15px;
 }
 
 .news p {
     font-size: 16px;
+    padding: 0;
+    padding-left: 20px;
 }
 
 .news a {
+    display: block;
+    width: 300px;
     font-size: 24px;
     font-weight: bold;
     color: black;
     text-decoration: underline;
+    margin-left: 20px;
 }
 
 .mailing {
+    background-color: #f8f7f4;
+
     box-sizing: border-box;
-    width: 40%;
+    width: 48%;
     height: 15vw;
     border: 3px solid #eb563b;
     font-size: 16px;
+    border-radius: 15px;
+    padding-left: 20px;
+}
+
+.mailing p {
+    display: block;
+    padding-top: 30px;
+    
 }
 
 .mailing-button {
@@ -174,6 +378,13 @@ a {
     font-weight: bold;
     line-height: 25px;
     border-radius: 50px;
+
+    border: none;
+}
+
+.subscription-email {
+    border: 1px solid gray;
+    border-radius: 5px;
 }
 
 .address {
@@ -198,4 +409,18 @@ a {
     font-weight: bold;
     line-height: 25px;
     border-radius: 50px;
+}
+
+/* Особое */
+
+.visually-hidden {
+    position:absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden; 
+   
 }
