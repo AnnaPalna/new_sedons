@@ -5,8 +5,7 @@
 }  */
 
 html, body {
-    min-width: 1200px;
-    min-height: 1750px;
+
 }
 
 body {
@@ -14,7 +13,7 @@ body {
     padding: 0;
 
     font-family: "Roboto", Arial, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     color: black;
 
@@ -23,9 +22,135 @@ body {
 
 /*Шапка*/
 
+.site-wrapper {
+    min-width: 940px;
+    background-color: #849d8f;
+    background-image: url("img/back-ice.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    transition: background-image 0.5s ease, background-color 0.5s ease;
+
+    min-height: 100vh;
+}
+
 .container {
-    width: 1150px;
+    width: 900px;
     margin: 0 auto;
+    padding: 0 20px;
+}
+
+.slider {
+    position: relative;
+
+    padding-top: 321px;
+
+    text-align: center;
+    color: #ffffff;
+}
+
+.slide {
+    display: none;
+}
+
+.slider-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.slide-title {
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 27px;
+
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 800;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 44px;
+
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 41px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+    background: #f26843;
+    background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+    border-radius: 50px;
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+    border: none;
+
+    cursor: pointer;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.button:active{
+    background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+    box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 63px;
+    left: 0;
+    z-index: 20;
+
+    font-size: 0;
+}
+
+.slider-controls label {
+    display:inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+    
+    vertical-align: top;
+
+    background-color: transparent;
+    border:2px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#product-1:checked ~ .site-wrapper {
+    background-color: #849d8f;
+    background-image: url("img/back-ice.png");
+}
+
+#product-2:checked ~ .site-wrapper {
+    background-color: #8996a6;
+    background-image: url("img/back-ice2.png");
+}
+
+#product-3:checked ~ .site-wrapper {
+    background-color: #9d8b84;
+    background-image: url("img/back-ice3.png");
+}
+
+
+
+#product-1:checked ~ .site-wrapper #slide1,
+#product-2:checked ~ .site-wrapper #slide2,
+#product-3:checked ~ .site-wrapper #slide3 {
+    display:block;
+}
+
+#product-1:checked ~ .site-wrapper label[for="product-1"],
+#product-2:checked ~ .site-wrapper label[for="product-2"],
+#product-3:checked ~ .site-wrapper label[for="product-3"] {
+    background-color: #fff;
 }
 
 a {
@@ -79,6 +204,7 @@ a {
 
 .site-navigation a,
 .user-navigation a {
+    display: block;
     color: #ffffff;
 }
 
@@ -96,22 +222,9 @@ a {
     padding: 0 10px;
 }
 
-.slider h2 {
-    position: relative;
-    font-size: 60px;
-    font-weight: bold;
-    color:#ffffff;
 
-    text-align: center;
-    margin-top: -300px;
-    z-index: 10;
-}
 
-.button-wrapper {
-    
-}
-
-.slider-button {
+/* .slider-button {
     position: relative;
     margin:auto; 
     display:block;
@@ -128,28 +241,10 @@ a {
     border-radius: 50px;
     border:none;
 
-}
+} */
 
 /* Главный раздел */
 
-.slider {
-    
-}
-
-.first-img {
-  left: 240px;
-  /* margin-left: 240px;  */
-  position: relative;
-  z-index: 3;
-}
-
-.second-img {
-    position: absolute;
-    top: 150px;
-    left: 620px;
-    z-index: 0;
-    
-}
 
 .promotion-wrapper {
     display: flex;
