@@ -37,6 +37,7 @@ body {
     padding: 0 20px;
 }
 
+
 .slider {
     position: relative;
 
@@ -207,6 +208,30 @@ a {
     color: #ffffff;
 }
 
+.main-navigation .main-link {
+    border-radius: 16px;
+    color: #fff;
+    display: block;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    padding: 7px 14px;
+    text-decoration: none;
+}
+
+.main-navigation .main-link:hover {
+    color: #323232;
+    background-color: #f7f6f3;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.main-menu .active-link {
+    background-color: #d07058;
+    color: #fff;
+}
+
 .site-navigation a:hover,
 .user-navigation a:hover {
     color:black;
@@ -221,9 +246,6 @@ a {
     padding: 0 25px;
 }
 
-.login-link {
-    position: relative; 
-}
 
 .login-link::before {
     content:"";
@@ -231,10 +253,8 @@ a {
     position: absolute;
     margin-left: -25px;
 
-    
     width: 20px;
     height: 20px;
-
 
     background-image: url("svg/entrance1.svg");
 
@@ -381,7 +401,6 @@ a {
 .range-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     list-style: none;
 
     margin:0;
@@ -390,6 +409,7 @@ a {
 }
 
 .range-list li {
+    border: 1px solid red;
     padding:10px;
 }
 
