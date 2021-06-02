@@ -266,6 +266,12 @@ a {
     filter: invert(100%);
 }
 
+.login-link:hover {
+    color: #333333;
+    background: #f8f7f4;
+    background-position: -33px -546px;
+}
+
 .market-cart::before {
     content: "";
     position: absolute;
@@ -409,7 +415,6 @@ a {
 }
 
 .range-list li {
-    border: 1px solid red;
     padding:10px;
 }
 
@@ -670,11 +675,18 @@ a {
 
 /* Подвал сайта */
 
+
+.main-footer{
+    margin: 0;
+    padding: 0;
+    min-height: 100px;
+}
+
 .footer-social {
     display: inline-block;
     margin-bottom: 25px;
     margin-right: 78px;
-    margin-top: 10px;
+    margin-top: 30px;
     padding-bottom: 0;
     padding-right: 30px;
     padding-top: 15px;
@@ -692,8 +704,7 @@ a {
     height: 32px;
     margin: 0;
     font-size: 0;
-    vertical-align: top;
-    text-decoration: none;
+    text-decoration: none;    
 }
 
 .social-button-tw {
@@ -724,14 +735,13 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
-    margin-top: 30px;
 }
 
 
 .footer-for-providers {
     display: flex;
     flex-direction: row;
+    margin-top: 30px;
 }
 
 .wrap1-providers {
@@ -751,6 +761,11 @@ a {
     font-weight: bold;
     padding-bottom: 10px;
 }
+
+
+.footer-copyright {
+    margin-top: 30px;
+}
 /* Особое */
 
 .visually-hidden {
@@ -762,5 +777,4 @@ a {
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden; 
-   
 }
